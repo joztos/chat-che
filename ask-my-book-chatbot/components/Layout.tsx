@@ -21,17 +21,17 @@ const Layout: FC<LayoutProps> = ({
 }) => {
   return (
     <div className="mx-auto h-screen flex flex-col">
-      <Head>
+      {/* <Head>
         {title && <title>{`${title} - Steamship + Vercel Examples`}</title>}
         {description && <meta name="description" content={description} />}
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
-      <Nav path={path} deployButton={deployButton} />
+      {/* <Nav path={path} deployButton={deployButton} /> */}
 
       <div className="px-8 bg-accents-0">{children}</div>
 
-      <footer className="py-10 w-full mt-auto border-t flex items-center justify-center bg-accents-1 z-20">
+      {/* <footer className="py-10 w-full mt-auto border-t flex items-center justify-center bg-accents-1 z-20">
         <span className="text-primary">Created with</span>
         <a
           href="https://steamship.com"
@@ -51,7 +51,7 @@ const Layout: FC<LayoutProps> = ({
           className="text-black text-blue-600 ml-1 mr-1"
         > the ask-my-book-chatbot
         </a> template.
-      </footer>
+      </footer> */}
     </div>
   )
 }
