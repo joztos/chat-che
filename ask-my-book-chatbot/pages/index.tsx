@@ -39,7 +39,7 @@ function Home() {
   return (
     <Page className="flex flex-col gap-12 ">
       <section className="flex flex-col gap-6 " >
-        <Text variant="h1">Chatea con tu libro 🧠</Text>
+        <Text variant="h1">Chat with your documents 🧠</Text>
         {isReady ? <Documents baseUrl={baseUrl}/>: <div/>}
       </section>
 

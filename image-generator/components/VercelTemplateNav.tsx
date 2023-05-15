@@ -61,7 +61,7 @@ export default function VercelTemplateNav({ path, deployButton }: VercelTemplate
                 target="_blank"
                 rel="noreferrer"
               >
-                Emdi →
+                More Examples →
               </Button>
             </span>
             <span className="ml-2 h-full flex items-center cursor-not-allowed text-accents-5">

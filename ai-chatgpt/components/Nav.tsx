@@ -62,7 +62,7 @@ export default function Nav({ path, deployButton }: NavProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Emdi →
+                More Examples →
               </Button>
             </span>
             <span className="ml-2 h-full flex items-center cursor-not-allowed text-accents-5">
