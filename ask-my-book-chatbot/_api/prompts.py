@@ -9,7 +9,7 @@ from langchain.chains.prompt_selector import (
     is_chat_model,
 )
 
-CONDENSE_QUESTION_PROMPT_TEMPLATE = """Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+CONDENSE_QUESTION_PROMPT_TEMPLATE = """Dada la siguiente conversación y una pregunta de seguimiento, reformula la pregunta de seguimiento para que sea una pregunta independiente.
 
         Chat History:
         {chat_history}
