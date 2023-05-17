@@ -32,7 +32,7 @@ class TwitterBioGeneratorPackage(PackageService):
         prompt = f"{prompt_prefix}{prompt_infix}{prompt_suffix}"
 
         llm = self.client.use_plugin('gpt-3', config={
-            "max_words": 80
+            "max_words": 160
         })
         
         output = llm.generate(prompt)
