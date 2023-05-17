@@ -67,7 +67,7 @@ export function ChatLine({ who = 'bot', message, sources, isPlausible}: Message)
               {isPlausible === false && (
 
 <div className="flex flex-row items-center text-orange-600 mb-6">
-<HiShieldExclamation className="mr-2 h-5 w-5" />The AI believes it may have hallucinated this answer. Please make sure to verify with the original sources.
+<HiShieldExclamation className="mr-2 h-5 w-5" />Nuestra IA cree que pudo haber alucinado esta respuesta. Asegúrate de verificar con las fuentes originales.
 </div>
 
 
