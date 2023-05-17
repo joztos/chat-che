@@ -10,10 +10,10 @@ from constants import DEBUG
 
 
 class FactChecker:
-    FACT_CHECK_PROMPT_TEMPLATE = """I want you to verify the truthfulness and correctness of a given ANSWER. 
+    FACT_CHECK_PROMPT_TEMPLATE = """Quiero que verifiques la veracidad y corrección de una RESPUESTA dada. 
 
-                   Answer "incorrect" if you think the ANSWER is incorrect in light of the SOURCES. 
-                   Answer "correct" if you think the ANSWER is correct in light of the SOURCES. 
+                   Responde "incorrecto" si consideras que la RESPUESTA es incorrecta a la luz de las FUENTES. 
+                   Responde "correcto" si consideras que la RESPUESTA es correcta a la luz de las FUENTES. 
 
                    QUESTION: {question}
 
@@ -40,7 +40,9 @@ class FactChecker:
         if (
             "I do not know" in answer
             or "I don't know" in answer
-            or "No sources found" in answer
+            or "No sources found" in 
+            or "No se" in answer
+            or "No lo se" in answer
         ):
             return True
         if not sources:
