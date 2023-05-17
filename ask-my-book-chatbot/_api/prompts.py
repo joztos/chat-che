@@ -31,8 +31,7 @@ PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
 )
 
-system_template = """Use the following pieces of context to answer the users question. 
-If you cannot answer the question with the given context, just say that you don't know, don't try to make up an answer.
+system_template = """Utiliza los siguientes elementos de contexto para responder la pregunta del usuario. Si no puedes responder la pregunta con el contexto proporcionado, simplemente di que no sabes, no intentes inventar una respuesta.
 ----------------
 {context}"""
 messages = [
