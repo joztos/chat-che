@@ -1,7 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import Head from 'next/head.js'
 import Nav, { NavProps } from './Nav'
-import Logo from './Steamship'
 import { ComponentType } from 'react'
 
 export interface LayoutProps extends NavProps {
@@ -10,54 +9,48 @@ export interface LayoutProps extends NavProps {
   description?: string
 }
 
-
-
 const Layout: FC<LayoutProps> = ({
   title,
   description,
   path,
-  deployButton,
   children,
 }) => {
   return (
     <div className="mx-auto h-screen flex flex-col">
-      {/* <Head>
+      <Head>
         {title && <title>{`${title} - Steamship + Vercel Examples`}</title>}
         {description && <meta name="description" content={description} />}
         <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+      </Head>
 
-      {/* <Nav path={path} deployButton={deployButton} /> */}
+      <Nav path={path} />
 
       <div className="px-8 bg-accents-0">{children}</div>
 
-      {/* <footer className="py-10 w-full mt-auto border-t flex items-center justify-center bg-accents-1 z-20">
-        <span className="text-primary">Created with</span>
+      <footer className="py-10 w-full mt-auto border-t flex items-center justify-center bg-accents-1 z-20">
+        <span className="text-primary">Created by Samasat Group for&nbsp;</span>
         <a
-          href="https://steamship.com"
-          aria-label="Steamship.com Link"
+          href="https://www.emdischool.com/"
+          aria-label="EMDISchool.com Link"
           target="_blank"
           rel="noreferrer"
           className="text-black "
         >
-          <Logo
-            className="inline-block h-6 ml-2 text-primary"
-          /> <span className='text-blue-800'>Steamship</span>
-        </a>. Based on the
+          <strong>EMDI school </strong>
+        </a>. Powered
         <a
-          href="https://github.com/steamship-core/vercel-examples/tree/main/ask-my-book-chatbot"
+          href="https://vercel.com/templates/next.js/ai-gpt3-chatbot"
           target="_blank"
           rel="noreferrer"
-          className="text-black text-blue-600 ml-1 mr-1"
-        > the ask-my-book-chatbot
-        </a> template.
-      </footer> */}
+          className="text-black ml-1 mr-1"
+        > via <strong>Navi AI</strong>.
+        </a> .
+      </footer>
     </div>
   )
 }
 
 export default Layout
-
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
