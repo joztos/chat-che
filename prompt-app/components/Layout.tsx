@@ -1,13 +1,13 @@
-import type { FC, ReactNode } from 'react'
-import Head from 'next/head.js'
-import Nav, { NavProps } from './Nav'
-import Logo from './Steamship'
-import { ComponentType } from 'react'
+import type { FC, ReactNode } from 'react';
+import Head from 'next/head.js';
+import Nav, { NavProps } from './Nav';
+import Logo from './Steamship';
+import { ComponentType } from 'react';
 
 export interface LayoutProps extends NavProps {
-  children?: ReactNode
-  title?: string
-  description?: string
+  children?: ReactNode;
+  title?: string;
+  description?: string;
 }
 
 const Layout: FC<LayoutProps> = ({
@@ -25,7 +25,9 @@ const Layout: FC<LayoutProps> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav path={path} deployButton={deployButton} />
+      <Nav path={path} deployButton={deployButton}>
+        <img src="/vercel.svg" className="w-8 h-8 ml-2" alt="Vercel Logo" />
+      </Nav>
 
       <div className="px-8 bg-accents-0">{children}</div>
 
@@ -52,22 +54,22 @@ const Layout: FC<LayoutProps> = ({
 
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
 
 
-const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
+const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>;
 
 export interface LayoutProps extends NavProps {
-    children?: ReactNode;
-    title?: string;
-    description?: string;
+  children?: ReactNode;
+  title?: string;
+  description?: string;
 }
 
 export function getLayout<LP extends {}>(
   Component: ComponentType<any>
 ): ComponentType<LP> {
-  return (Component as any).Layout || Noop
+  return (Component as any).Layout || Noop;
 }

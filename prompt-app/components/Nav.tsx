@@ -1,21 +1,23 @@
-import Link from '@vercel/examples-ui/link'
-import Button from '@vercel/examples-ui/button'
-import DeployButton, { DeployButtonProps } from '@vercel/examples-ui/deploy-button'
-import { Layout, Text, Page } from '@vercel/examples-ui'
-import Logo from './Steamship'
+import Link from '@vercel/examples-ui/link';
+import Button from '@vercel/examples-ui/button';
+import DeployButton, { DeployButtonProps } from '@vercel/examples-ui/deploy-button';
+import { Layout, Text, Page } from '@vercel/examples-ui';
+import Logo from './Steamship';
 
-const REPO_URL = 'https://github.com/steamship-core/vercel-examples/tree/main'
+const REPO_URL = 'https://github.com/steamship-core/vercel-examples/tree/main';
 
 export interface NavProps {
-  path: string
-  deployButton?: Partial<DeployButtonProps>
+  path: string;
+  deployButton?: Partial<DeployButtonProps>;
 }
+
+import EmdiLogo from 'C:\Users\john\OneDrive\Escritorio\Github Repositories\chat-with-your-book-Chemistry\prompt-app\public\EMDILOGO.png'; // Replace with actual path to EMDI logo image
 
 export default function Nav({ path, deployButton }: NavProps) {
   const displayPath = ['Vercel Examples']
     .concat(path?.split('/').filter(Boolean) || [])
-    .join(' / ')
-  const repositoryUrl = deployButton?.repositoryUrl || `${REPO_URL}/${path}`
+    .join(' / ');
+  const repositoryUrl = deployButton?.repositoryUrl || `${REPO_URL}/${path}`;
 
   return (
     <nav className="border-b border-gray-200 py-5 relative z-20 bg-background shadow-[0_0_15px_0_rgb(0,0,0,0.1)]">
@@ -24,36 +26,10 @@ export default function Nav({ path, deployButton }: NavProps) {
           <Link href="https://www.steamship.com/">
             <Logo className={`w-8 h-8 text-black`} ></Logo>
           </Link>
-          <ul className="flex items-center content-center">
-            <li className="ml-2 text-gray-200">
-              <svg
-                viewBox="0 0 24 24"
-                width="32"
-                height="32"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                shapeRendering="geometricPrecision"
-              >
-                <path d="M16.88 3.549L7.12 20.451"></path>
-              </svg>
-            </li>
-            <li className="font-medium" style={{ letterSpacing: '.01px' }}>
-              <Link
-                href={repositoryUrl}
-                className="text-accents-6 no-underline transition-colors duration-200 hover:text-accents-8 cursor-pointer"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {displayPath}
-              </Link>
-            </li>
-          </ul>
         </div>
         <div className="flex-1 justify-end hidden md:flex">
           <nav className="flex-row inline-flex items-center">
+            <img src={EmdiLogo} className="w-8 h-8 mr-2" alt="EMDI Logo" />
             <span className="ml-2 h-full flex items-center cursor-not-allowed text-accents-5">
               <Button
                 variant="ghost"
@@ -77,5 +53,5 @@ export default function Nav({ path, deployButton }: NavProps) {
         </div>
       </div>
     </nav>
-  )
+  );
 }
