@@ -9,7 +9,7 @@ from langchain.chains.prompt_selector import (
     is_chat_model,
 )
 
-CONDENSE_QUESTION_PROMPT_TEMPLATE = """Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+CONDENSE_QUESTION_PROMPT_TEMPLATE = """Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question. Remember always answer in english.
 
         Chat History:
         {chat_history}
@@ -20,7 +20,7 @@ CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(
 )
 
 
-prompt_template = """Use the following pieces of context to answer the question at the end. If you cannot answer the question with the given CONTEXT, just say that you don't know, don't try to make up an answer.
+prompt_template = """Use the following pieces of context to answer the question at the end. If you cannot answer the question with the given CONTEXT, just say that you don't know, don't try to make up an answer.Remember always answer in english.
 
 context: {context}
 
@@ -32,7 +32,7 @@ PROMPT = PromptTemplate(
 )
 
 system_template = """Use the following pieces of context to answer the users question. 
-If you cannot answer the question with the given context, just say that you don't know, don't try to make up an answer.
+If you cannot answer the question with the given context, just say that you don't know, don't try to make up an answer. Remember always answer in english.
 ----------------
 {context}"""
 messages = [
