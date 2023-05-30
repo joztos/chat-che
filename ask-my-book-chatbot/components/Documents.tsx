@@ -47,7 +47,7 @@ export default function Documents({ baseUrl }: { baseUrl: string }) {
 
   ))}
 <ListGroup.Item key="more_books">
-👋 Join our community &nbsp;<a href="https://steamship.com/discord" className="font-semibold text-gray-900 underline dark:text-white decoration-sky-500">Edcosystem</a>&nbsp;
+👋 Join our community &nbsp;<a href="https://discord.gg/Ut6F2m3T" className="font-semibold text-gray-900 underline dark:text-white decoration-sky-500">Edcosystem</a>&nbsp;
 </ListGroup.Item>
 
   </ListGroup></div>
