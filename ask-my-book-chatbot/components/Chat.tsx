@@ -11,7 +11,7 @@ const COOKIE_NAME = 'ask-my-book-steamship'
 export const initialMessages: Message[] = [
   {
     who: 'bot',
-    message: 'Hola! Acabo de leer algunos de tus libros. Hazme una pregunta!',
+    message: 'Hello! I just read some of your books. Ask me a question!',
   },
 ]
 
