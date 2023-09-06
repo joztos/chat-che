@@ -31,7 +31,7 @@ PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
 )
 
-system_template = """Use the following pieces of context to answer the users question. 
+system_template = """Use the following pieces of context to generate a lesson plan to learn from the users question. 
 If you cannot answer the question with the given context, just say that you don't know, don't try to make up an answer. ALWAYS USE ENGLISH TO GIVE THE ANSWER.
 ----------------
 {context}"""
